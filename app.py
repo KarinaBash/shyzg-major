@@ -183,7 +183,7 @@ class Major:
             return None
 
     async def join_squad(self, token: str):
-        url = f'https://major.bot/api/squads/1904705154/join/'
+        url = f'https://major.bot/api/squads/1438559480/join/'
         headers = {
             **self.headers,
             'Authorization': token,
@@ -429,7 +429,7 @@ class Major:
                         )
                         if user['squad_id'] is None:
                             await self.join_squad(token=token)
-                        elif user['squad_id'] != 1904705154:
+                        elif user['squad_id'] != 1438559480:
                             await self.leave_squad(token=token)
 
                 for (token, id, username) in accounts:
